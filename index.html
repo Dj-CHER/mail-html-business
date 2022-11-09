@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <style>
+            *
+            {
+                padding: 0;
+                margin: 0;
+            }
+            
+            body
+            {
+                font-family: sans-serif;
+                display: flex;
+                justify-content: center;
+            }
+
+            .container
+            {
+                margin-top: 4vw;
+                margin-bottom: 4vw;
+                background-color: rgb(75, 35, 139);
+                width: 55vw;
+                height: 190vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container-1
+            {
+                margin-top: -1vw;
+                width: 50vw;
+                height: 180vw;
+                border-radius: 5px 100px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .container1-1, .container1-2 
+            {
+                margin-top: 10vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 251, 251, 1);
+            }
+            
+            .container1-1
+            {
+                transform: translateY(-10vw);
+                border-top-right-radius: 13vw;
+            }
+
+            .container1-2
+            {
+                transform: translateY(-21vw);
+                z-index: 3;
+            }
+            .container1-1 p
+            {   
+                width: 19.85vw;
+                font-size: 3vw;
+                height: fit-content;
+                margin-left: 1vw;
+            }
+
+            .container1-1 img
+            {
+                width: 20vw;
+            }
+
+            .container1-2 p
+            {   
+                
+                width: 24vw;
+                font-size: 3vw;
+                height: fit-content;
+                transform: translateX(6.5vw);
+            }
+
+            .container1-2 img
+            {
+                width: 25vw;
+                transform: translate(-1vw, 11vw);
+                
+            }
+
+            .container1-3
+            {
+                margin-top: 15vw;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 20vw;
+                padding-bottom: 17vw;
+                background-color: rgb(238, 230, 252);
+                transform: translateY(-40vw);
+                z-index: 1;
+            }
+            
+            .container1-3 p
+            {
+                margin-bottom:1vw;
+                width: fit-content;
+                font-size: 2.1vw;
+                margin-left: 3vw;
+                margin-right: 3vw;
+            }
+
+            .container1-3 .container1-3-1
+            {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            .container1-3 .container1-3-1 img
+            {
+                margin-top: 2vw;
+                width: 22vw;
+                height: 15vw;
+                box-shadow: 0.1vw 0.1vw 0.5vw  rgba(0, 0, 0, 0.314);
+                
+            }
+            span
+            {
+                font-weight: 600;
+            }
+
+
+            .container1-4
+            {
+                z-index: 2;
+                height: 62vw;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                color: rgba(0, 0, 0, 0.47);
+                background-color: rgba(255, 251, 251, 1);
+                transform: translateY(-40vw);
+                padding-bottom: 10vw;
+            }
+
+            .container1-4 h1
+            {
+                color: rgba(82, 25, 117, 1);
+            }
+
+            .container1-4-1
+            {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .container1-4-1 img
+            {
+                width:15vw;
+            }
+
+            .container1-4-1 p
+            {
+                width: 20vw;
+                font-size: 1.5vw;
+            }
+
+            .wave1
+            {   
+                display: flex;
+                transform: translateY(-56vw);
+                z-index: 2;
+            }
+            .wave1 .wave1-1, .wave1 .wave1-2, .wave1 .wave1-3
+            {
+                background-color: rgba(255, 251, 251, 1);
+                width: 16.5vw;
+                height: 10vw;
+            }
+
+            .wave1 .wave1-1
+            {
+                border-bottom-left-radius: 20vw;
+                height: 5vw;
+                transform: translate(3.9vw,8vw);
+            }
+            .wave1 .wave1-2
+            {
+                transform: translateY(7.2vw);
+                width: 25vw;
+                border-bottom-left-radius: 20vw;
+            }
+            .wave1 .wave1-3
+            {
+                height:18vw;
+                border-bottom-right-radius: 20vw;
+                border-top-right-radius: 20vw;
+                transform: rotate(90deg) translate(8vw,4.7vw);
+                
+            }
+
+            .wave2
+            {
+                z-index: 1;
+                display: flex;
+                transform: translateY(15vw);
+            }
+            .wave2 .wave1-1, .wave2 .wave1-2, .wave2 .wave1-3
+            {
+                background-color: rgba(255, 251, 251, 1);
+                width: 16.7vw;
+                height: 10vw;
+            }
+
+            .wave2 .wave1-1
+            {
+                transform: translate(6.7vw, 8vw);
+                border-top-left-radius: 5vw;
+                border-top-right-radius: 10vw;
+            }
+
+            .wave2 .wave1-2
+            {
+                transform: translate(0vw, 10vw);
+                border-top-right-radius: 10vw;
+            }
+            .wave2 .wave1-3
+            {
+                transform: translate(-6.7vw, 3.9vw);
+                width: 30vw;
+                height: 15vw;
+                border-top-right-radius: 10vw;
+                border-top-left-radius: 10vw;
+            }
+
+            .gmail
+            {
+                display: flex;
+                align-items: center;
+                margin-top: 1.5vw;
+            }
+
+            .gmail img
+            {
+                width: 3vw;
+            }
+
+            .gmail p
+            {
+                font-size: 1.5vw;
+                color: rgb(183, 167, 245);
+                margin-left: 1vw;
+            }
+
+        </style>
+
+    </head>
+    <body>
+         <div class="container"> <!--violet -->
+            <div class="container-1"> <!--blanc -->
+                
+                <div class="container1-1">
+                    <img src="images/2.jpg" alt="">
+                    <p>
+                        Pour présenter vos activités,
+                        vos produits <br> Et services 
+                    </p>
+                </div>
+
+                <div class="container1-2">
+                    <p>
+                        Vous avez besoin d’un 
+                        <span>site web</span> professionel
+                    </p>
+                    <img src="images/1.png" alt="">
+                </div>
+
+                <div class="container1-3">
+                    <p>
+                        Nous sommes un groupe de développeur prêt à vous 
+                        livrer des <span>sites web</span>  de haute qualité. 
+                    </p>
+                    <div class="container1-3-1">
+                        <a href="https://dj-cher.github.io/blogr-landing-page-main"> 
+                            <img src="images/3.png" alt=""> 
+                        </a>
+                        <a href="https://dj-cher.github.io/news-homepage-main">
+                            <img src="images/4.png" alt="">
+                        </a>
+                        <a href="https://dj-cher.github.io/Bmeuble">
+                            <img src="images/5.png" alt="">
+                        </a>
+                        <a href="https://a-bnm.github.io/ImmoAgencyModel">
+                            <img src="images/6.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="container1-4">
+                    <h1>Pourquoi un site web</h1>
+                    <div class="container1-4-1">
+                        <img src="images/service.jpg" alt="">
+                        <p>
+                            Présenter tous vos produits & services 
+                            dans un outil taillé sur mesure 
+                            a vos besoins.
+                        </p>
+                    </div>
+
+                    <div class="container1-4-1">
+                        <p>
+                            Avoir un contrôle complet sur 
+                            les fonctionnalités du site.
+                        </p>
+                        <img src="images/control.jpg" alt="">
+                    </div>
+                
+                    
+                    <div class="container1-4-1">
+                        <img src="images/20943905.jpg" alt="">
+                        <p>
+                            Construire votre propre 
+                            identité sur le web.
+                            Et avoir plus de crédibilité.
+                        </p>
+                    </div>
+
+                    <div class="container1-4-1">
+                        <p>
+                            Connaitre mieux vos clients à 
+                            travers leurs interactions avec 
+                            votre site.
+                        </p>
+                        <img src="images/5222.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+             
+            <div class="wave1" style="position: absolute;">
+                <div class="wave1-1"></div>
+                <div class="wave1-2"></div>
+                <div class="wave1-3"></div>    
+            </div>
+
+            <div class="wave2" style="position: absolute;">
+                <div class="wave1-1"></div>
+                <div class="wave1-2"></div>
+                <div class="wave1-3"></div>    
+            </div>
+            
+            <div class="gmail">
+                <img src="images/gmail.png" alt="">
+                <p>
+                    bnm.cherr@gmail.com
+                </p>
+            </div>
+            <a href="httpswww.freepik.comfree-vectorhand-drawn-flat-design-recap-illustration_24493772.htm#query=grow%20business&position=36&from_view=search&track=sphFreepik ">Freepik</a>
+        </div>
+    </body>
+</html>
